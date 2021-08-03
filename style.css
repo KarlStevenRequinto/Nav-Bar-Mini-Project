@@ -7,30 +7,52 @@
     text-decoration: none;
 }
 body {
+    
     background-color: rgb(27, 27, 27);
     min-height: 100vh;
 }
 nav {
-    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 20px 70px 20px 70px;
     background-color: brown;
     position: fixed;
-    width: 100%;
     align-items: center;
-    padding: 10px;
-    
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
 }
+
 .logobox {
-    
+    align-items: center;
+    display: flex;
     background-color: chartreuse;
-    display: inline-block
+    font-size: 16px;
 }
+
 .listbox {
-    
     background-color: rgb(0, 255, 242);
-    display: inline-block;
+    width: 30%;
 }
+
 .iconbox {
+    background-color: rgb(229, 255, 0);  
+}
+
+.lankylogo {
+    width: 40px;
+    height: 40px;
+}
+
+.iconbox .picofuser {
    
-    background-color: rgb(229, 255, 0);
-    display: inline-block;
+   width: 40px;
+    height: 40px;
+}
+
+ul {
+    
+    display: flex;
+    justify-content: space-around;
+    
 }

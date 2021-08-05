@@ -7,20 +7,19 @@
     text-decoration: none;
 }
 body {
-    
-    background-color: rgb(27, 27, 27);
+
     min-height: 100vh;
 }
 nav {
     box-sizing: border-box;
     width: 100%;
-    padding: 20px 70px 20px 70px;
+    padding: 10px 70px 10px 70px;
     background-color: brown;
     position: fixed;
     align-items: center;
     display: flex;
     justify-content: space-between;
-    height: 70px;
+    height: 60px;
 }
 
 .logobox {
@@ -28,15 +27,20 @@ nav {
     display: flex;
     background-color: chartreuse;
     font-size: 16px;
+    
+}
+.logobox a {
+    height: 40px;
 }
 
 .listbox {
     background-color: rgb(0, 255, 242);
-    width: 30%;
+    width: 30%; 
 }
 
 .iconbox {
-    background-color: rgb(229, 255, 0);  
+    background-color: rgb(229, 255, 0);
+    height: 40px;  
 }
 
 .lankylogo {
@@ -51,8 +55,48 @@ nav {
 }
 
 ul {
-    
     display: flex;
     justify-content: space-around;
     
+}
+/* ==== BURGER DISPLAY NONE*/
+.burger {
+    display: none;
+}
+.burger div {
+    width: 25px;
+    height: 4px;
+    background-color: azure;
+    margin: 3px;
+}
+
+/* ===== MOBILE @768px=====*/
+@media screen and (max-width:768px) {
+    body {
+        display: none;
+    }
+    
+}
+
+/* ===== MOBILE @1024px=====*/
+@media screen and (max-width:1024px) {
+    .listbox {
+        background-color: rgb(0, 255, 242);
+        width: 50%;
+    }
+    .logobox h1{
+        display: none;
+    }
+    nav {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 10px 20px;
+        background-color: rgb(42, 147, 165);
+        position: fixed;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        height: 60px;
+    }
+
 }

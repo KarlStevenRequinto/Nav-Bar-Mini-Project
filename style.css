@@ -5,41 +5,43 @@
     font-family: Arimo;
     list-style: none;
     text-decoration: none;
+    box-sizing: border-box;
+    
 }
 body {
-
+    background-color: gray;
     min-height: 100vh;
 }
 nav {
-    box-sizing: border-box;
     width: 100%;
     padding: 10px 70px 10px 70px;
-    background-color: brown;
+    background-color: rgba(255, 255, 255, 0.856);
     position: fixed;
     align-items: center;
     display: flex;
     justify-content: space-between;
-    height: 60px;
+    min-height: 60px;
+    
 }
 
 .logobox {
     align-items: center;
     display: flex;
-    background-color: chartreuse;
-    font-size: 16px;
-    
+    font-size: 20px;
+    color: rgb(65, 65, 65);
 }
+
 .logobox a {
     height: 40px;
 }
 
-.listbox {
-    background-color: rgb(0, 255, 242);
-    width: 30%; 
+.listsbox {  
+    width: 30%;
+    background-color: rgba(255, 255, 255, 0.856);
 }
 
 .iconbox {
-    background-color: rgb(229, 255, 0);
+    
     height: 40px;  
 }
 
@@ -56,42 +58,75 @@ nav {
 
 ul {
     display: flex;
-    justify-content: space-around;
-    
+    justify-content: space-around;  
+}
+ul a {
+    color:rgb(65, 65, 65);
 }
 /* ==== BURGER DISPLAY NONE*/
 .burger {
     display: none;
+    padding: 0;
 }
 .burger div {
-    width: 25px;
-    height: 4px;
-    background-color: azure;
-    margin: 3px;
+    border-radius: 2px;
+    width: 30px;
+    height: 4.5px;
+    background-color: rgb(65, 65, 65);
+    margin: 8px;
+}
+.dummybody {
+    padding-top: 100px;
+    font-size: 100px;
 }
 
 /* ===== MOBILE @768px=====*/
 @media screen and (max-width:768px) {
     body {
-        display: none;
+        overflow-x: hidden;
     }
-    
+    .listsbox {
+       position: absolute;
+       right: 0px;
+       height: 92vh;
+       top: 60px;
+       display: flex;
+       justify-content: center;
+       transform: translateX(100%);
+   }
+   .listsbox li {
+      opacity: 0;
+   }
+   ul {   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .burger {
+        position: absolute;
+        display: block;
+        right: 70px;
+    }
+    .listsbox-active {
+        transform: translateX(0%);
+       
+    }
+
 }
 
 /* ===== MOBILE @1024px=====*/
 @media screen and (max-width:1024px) {
-    .listbox {
-        background-color: rgb(0, 255, 242);
-        width: 50%;
-    }
     .logobox h1{
         display: none;
     }
+    .listsbox {
+        width: 50%;
+    }
+
     nav {
         box-sizing: border-box;
         width: 100%;
         padding: 10px 20px;
-        background-color: rgb(42, 147, 165);
         position: fixed;
         align-items: center;
         display: flex;

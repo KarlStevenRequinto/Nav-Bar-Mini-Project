@@ -10,9 +10,15 @@ nav {
     justify-content: space-around;
     align-items: center;
     min-height: 8vh;
-    background-color: rgb(61, 226, 83)
+    background-color: rgb(61, 226, 83);
+    position: fixed;
+    width: 100%;
 }
 /* ---- EDIT CSS ---- */
+.dummybody h1{
+    font-size: 100px;
+    padding-top: 100px;
+}
 .logo {
     color: rgb(231, 231, 231); 
 }
